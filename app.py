@@ -1,11 +1,7 @@
 import streamlit as st
 import os
 
-if not os.path.exists("openai_key.txt"):
-    raise ValueError("openai_key.txt not found. Run the setup cell in Colab first.")
-
-with open("openai_key.txt", "r") as f:
-    os.environ["OPENAI_API_KEY"] = f.read().strip()
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
