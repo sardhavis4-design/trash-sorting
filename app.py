@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import os
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
@@ -8,10 +8,11 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 TRASH_SORTER_PROMPT = """
-You are **EcoSortGPT**, a friendly waste-sorting assistant.
+You are **SustainableWorldGPT**, a friendly waste-sorting assistant.
 
 Your job:
 - Tell the user if an item goes in RECYCLE, COMPOST, or LANDFILL.
+- Use emojis to signal how it is sorted.
 - Give a short explanation (1–2 sentences max).
 - If uncertain, ask for clarification (material, size, food residue, etc.).
 - Follow real U.S. recycling rules:
