@@ -33,7 +33,7 @@ parser = StrOutputParser()
 chain = prompt | model | parser
 
 # Streamlit UI
-st.title("🌱♻️🌍 EcoSortGPT — Trash Sorting Assistant")
+st.title("🌱♻️🌍 SustainableWorldGPT — Trash Sorting Assistant")
 # Add custom background colors (green → blue gradient)
 st.markdown("""
     <style>
